@@ -1,24 +1,16 @@
-def NOD(x):
-	count = 1
-	for i in range(1, x):
-		if x % i == 0:
-			count += 1
-	return count
 
+t = int(input())
+i = 1
+while t > 0:
+	a, b = input().split()
+	a = int(a)
+	b = int(b)
 
-lis = [0]*1001
-for i in range(1, 1001):
-	lis[i] = NOD(i)
+	print('Case ', i, ':', end=' ')
+	if a%b == 0:
+		print('divisible')
+	else:
+		print('not divisible')
 
-
-arr = [1]*1001
-k = 2
-for i in range(2, 33):
-	for j in range(1000, 0, -1):
-		if i == lis[j]:
-			arr[k] = j
-			k += 1
-
-
-for i in range(1, 1001):
-	print(arr[i], lis[i])
+	t -= 1
+	i += 1
